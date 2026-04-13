@@ -1,20 +1,3 @@
-/* ALT+SHIFT+F*/ /* ALT+SHIFT+F*/ /* ALT+SHIFT+F*/ /* ALT+SHIFT+F*/
-/* ALT+SHIFT+F*/ /* ALT+SHIFT+F*/ /* ALT+SHIFT+F*/ /* ALT+SHIFT+F*/
-/* semantiniai mėgsta savo margin ir kitus atributus pridėti, pvz. <figure> { display: block, margin-inline: 40px }*/
-/* headeriui/footeriui duota klasė jei kartais article turėtų header */
-/* text-align: center konteineriui galima */
-/* nav pvz. */
-/* ul {
-   display: flex;
-  justify-content: space-evenly; 
-  padding: initial;
-  list-style-type: none;
-  & a {
-    text-decoration: none;
-     color: green;
-  }
- } */
-
 /* global variables for project */
 
 :root {
@@ -320,24 +303,24 @@ section {
     margin-bottom: 1rem;
   }
   .new-offers .cups-image {
-  position: relative;
-  top: 0rem;
-  left: 8rem;
-}
-.new-offers .pancakes-image {
-  position: absolute;
-  top: 5rem;
-  left: 0rem;
-}
-.new-offers .nachos-image {
-  position: absolute;
-  top: 12rem;
-  left: 10rem;
-}
+    position: relative;
+    top: 0rem;
+    left: 8rem;
+  }
+  .new-offers .pancakes-image {
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+  }
+  .new-offers .nachos-image {
+    position: absolute;
+    top: 12rem;
+    left: 10rem;
+  }
   .new-offers figure {
-  height: 25rem;
-  display: block;
-}
+    height: 25rem;
+    display: block;
+  }
   .our-portfolio figure {
     flex-wrap: wrap;
   }
@@ -363,16 +346,15 @@ section {
 
 /* media for phones: width < 768px */
 @media (max-width: 767px) {
-  
-.header nav ul li {
-  font-size: small;
-margin: 0.1rem;
-padding-top: 1rem;
-}
-.header-info p {
-  width: 70%;
-  margin: auto;
-}
+  .header nav ul li {
+    font-size: small;
+    margin: 0.1rem;
+    padding-top: 1rem;
+  }
+  .header-info p {
+    width: 70%;
+    margin: auto;
+  }
 
   .what-we-do .doings article {
     flex-basis: 100%;
