@@ -6,19 +6,186 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div id="container">
       <header class="header">
-
+        <nav>
+          <img src="./img/white_logo.png" alt="Meteor logo" />
+          <ul class="navigation-elements">
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <div class="header-info">
+          <p class="introduction">INTRODUCTION TO</p>
+          <h1>CREATIVE METEOR</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sunt
+            eligendi provident expedita ab id laudantium mollitia repellat
+            repellendus saepe?
+          </p>
+          <button>DISCOVER MORE</button>
+        </div>
       </header>
 
-      <main>
+      <main class="main">
+        <section class="what-we-do">
+          <h2>WHAT WE DO</h2>
+          <hr />
+          <div class="doings">
+            <article>
+              <img
+                src="./icons/first-service-main.png"
+                alt="picture of a pen"
+              />
 
+              <h3>Easy Customizations</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit possimus quam a quasi nemo inventore.
+              </p>
+            </article>
+            <article>
+              <img
+                src="./icons/second-service-main.png"
+                alt="picture of a lightbulb"
+              />
+
+              <h3>Creative Ideas</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit possimus quam a quasi nemo inventore.
+              </p>
+            </article>
+            <article>
+              <img
+                src="./icons/third-service-main.png"
+                alt="picture of a dollar bill"
+              />
+
+              <h3>Good Profit</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit possimus quam a quasi nemo inventore.
+              </p>
+            </article>
+            <article>
+              <img
+                src="./icons/fourth-service-main.png"
+                alt="picture of a loudspeaker"
+              />
+
+              <h3>Open To Public</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit possimus quam a quasi nemo inventore.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="new-offers">
+          <article class="offers-description">
+            <h2>New offers just arrived, Get it now and take profit.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus impedit qui repellat numquam optio temporibus. Esse nemo
+              adipisci quasi sint saepe, sapiente eligendi magnam. Quam
+              provident numquam ut, nostrum aut modi dolorem rem in, tempore
+              ullam asperiores voluptatum, voluptatem adipisci?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              amet nemo distinctio sapiente quae totam ratione voluptas
+              doloribus corrupti ipsum officiis iusto quis in, nisi, voluptatum
+              tenetur tempora? Libero, officiis?
+            </p>
+            <button class="white-background-button">DISCOVER MORE</button>
+            <button>PURCHASE NOW</button>
+          </article>
+          <figure>
+            <img
+              class="cups-image"
+              src="./img/cups.jpg"
+              alt="picture of cups"
+            /><img
+              class="nachos-image"
+              src="./img/nachos.jpg"
+              alt="picture of nachos"
+            /><img
+              class="pancakes-image"
+              src="./img/pancakes.jpg"
+              alt="picture of pancakes"
+            />
+          </figure>
+        </section>
+
+        <section class="our-portfolio">
+          <h2>OUR PORTFOLIO</h2>
+          <hr />
+          <ul>
+            <li class="green-li-item">All</li>
+            <li>Nature</li>
+            <li>Workspace</li>
+            <li>City</li>
+            <li>Technology</li>
+          </ul>
+          <figure>
+            <img
+              src="./img/portfolio_big_01.jpg"
+              alt="picture of person working with a laptop"
+            />
+            <img src="./img/portfolio_big_02.jpg" alt="picture of a city" />
+            <img
+              src="./img/portfolio_big_03.jpg"
+              alt="picture of a person looking at a mountain"
+            />
+            <img
+              src="./img/portfolio_big_04.jpg"
+              alt="picture of a miniature stormtrooper looking at a lamppost"
+            />
+          </figure>
+        </section>
+
+        <section class="contact-us">
+          <h2>CONTACT US</h2>
+          <hr />
+          <div class="contact-elements">
+          <figure>
+            <img src="./img/map.jpg" alt="picture of google maps-singapore" />
+          </figure>
+          <form action="#" method="get">
+            <input class="fname" type="text" name="fname" placeholder="Your name..." />
+            <input type="email" name="email" placeholder="Your email..." />
+            <textarea name="message" placeholder="Your message..."></textarea>
+            <input type="submit" value="SEND MESSAGE" />
+          </form>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
-        
+        <p>Copyright &#169; Company Name - Design: <span>Meteor</span></p>
+        <ul>
+          <li><i class="fa fa-facebook"></i></li>
+          <li><i class="fa fa-twitter"></i></li>
+          <li><i class="fa fa-linkedin"></i></li>
+          <li><i class="fa fa-rss"></i></li>
+          <li><i class="fa fa-dribbble"></i></li>
+        </ul>
       </footer>
     </div>
   </body>

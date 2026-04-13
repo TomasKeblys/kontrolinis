@@ -15,29 +15,376 @@
   }
  } */
 
-/* to make border width count as a part of element etc. */
+/* global variables for project */
+
+:root {
+  --main-color: #a2cf8d;
+  --hover-color: #5c9d7d;
+  --gray-background-color: #3f3f3f;
+  --bright-background-color: #f2f2f2;
+  --border-radius: 20px;
+  --shadow: 0px 0px 15px 5px #cdcdcd;
+  --gap: 2rem;
+}
+
+/* make border width count as a part of element etc. */
+
 * {
   box-sizing: border-box;
 }
 
-/* global width, centered contents */
+/* global width, centered contents, covering images (set parent height) */
 
 #container {
   max-width: 1200px;
-  min-width: 375px;
+  min-width: 485px;
   margin: 0px auto;
+  font-family: "Open Sans", arial, sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+hr {
+  margin-bottom: 3rem;
 }
 
 /* header */
+.header {
+  background-image: url("../img/header.jpg");
+  height: 40rem;
+  position: relative;
+  align-content: center;
+  color: white;
+}
+.header nav {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5rem;
+  padding-inline: 2rem;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin: 1rem;
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.header nav img {
+  padding-top: 2rem;
+  width: 5rem;
+}
+.header-info .introduction {
+  color: var(--main-color);
+}
+.header-info {
+  text-align: center;
+}
+.header-info p {
+  width: 40%;
+  margin: auto;
+}
+h1 {
+  margin-top: 0px;
+}
+.header-info button {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid var(--main-color);
+  align-content: center;
+  background-color: var(--main-color);
+  border-radius: var(--border-radius);
+  color: white;
+}
 
 /* main */
 
+section {
+  padding: 3rem;
+}
+/* what-we-do section */
+.what-we-do {
+  background-color: var(--bright-background-color);
+  text-align: center;
+}
+.what-we-do hr {
+  width: 8%;
+}
+.what-we-do article {
+  & img {
+    width: 2rem;
+    height: 2rem;
+  }
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+.what-we-do .doings {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+/* new-offers section */
+
+.new-offers {
+  color: white;
+  background-color: var(--gray-background-color);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.new-offers figure {
+  position: relative;
+  margin: 0rem;
+  flex-basis: 45%;
+  & img {
+    width: 18rem;
+    height: 13rem;
+  }
+}
+.new-offers article {
+  flex-basis: 45%;
+}
+.new-offers figure {
+  height: 25rem;
+}
+.new-offers .cups-image {
+  position: relative;
+  top: 0rem;
+  left: 8rem;
+}
+.new-offers .pancakes-image {
+  position: relative;
+  top: -6rem;
+  left: 0rem;
+}
+.new-offers .nachos-image {
+  position: absolute;
+  top: 12rem;
+  left: 10rem;
+}
+.new-offers button {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid var(--main-color);
+  align-content: center;
+  background-color: var(--main-color);
+  border-radius: var(--border-radius);
+  color: white;
+}
+.new-offers button:hover {
+  background-color: var(--hover-color);
+}
+.new-offers .white-background-button:hover {
+  background-color: #a2cf8d;
+}
+.new-offers .white-background-button {
+  background-color: white;
+  color: var(--gray-background-color);
+  margin-right: 1rem;
+}
+
+/* our-portfolio section */
+
+.our-portfolio {
+  background-color: var(--bright-background-color);
+  text-align: center;
+}
+.our-portfolio hr {
+  width: 8%;
+}
+.our-portfolio ul li {
+  display: inline-block;
+  margin: 1rem;
+}
+.our-portfolio .green-li-item {
+  color: green;
+}
+.our-portfolio figure {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--gap);
+}
+.our-portfolio img {
+  height: 14rem;
+  width: 15rem;
+  object-fit: cover;
+}
+
+/* contact-us section */
+
+.contact-us {
+  background-color: var(--gray-background-color);
+  color: white;
+  text-align: center;
+}
+.contact-us hr {
+  width: 8%;
+}
+.contact-us .contact-elements {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.contact-us form {
+  margin-top: 4rem;
+  text-align: left;
+  flex-basis: 50%;
+}
+.contact-us form input {
+  background-color: rgb(176, 173, 173);
+  width: 46%;
+  margin-bottom: 2rem;
+  height: 2rem;
+}
+.contact-us form .fname {
+  margin-right: 2rem;
+}
+.contact-us form textarea {
+  background-color: rgb(176, 173, 173);
+  width: 98%;
+  height: 10rem;
+}
+.contact-us form input[type="submit"] {
+  margin-top: 2rem;
+  display: inline-block;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid var(--main-color);
+  align-content: center;
+  background-color: var(--main-color);
+  border-radius: var(--border-radius);
+  color: white;
+}
+
 /* footer */
+.footer {
+  color: white;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  background-color: black;
+  & ul li {
+    display: inline-block;
+    margin: 0.5rem;
+    color: var(--gray-background-color);
+  }
+}
+.footer p span {
+  color: red;
+}
+.footer p {
+  align-content: center;
+  margin-left: 2rem;
+}
+.footer ul {
+  margin-right: 2rem;
+}
+
+/* social media icons */
+
+.fa {
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
 
 /* media for tablets: width < 1024px */
 @media (max-width: 1023px) {
+  .what-we-do .doings {
+    flex-wrap: wrap;
+  }
+  .what-we-do .doings article {
+    flex-basis: 45%;
+  }
+  .new-offers {
+    flex-wrap: wrap;
+    display: block;
+  }
+  .new-offers .offers-description {
+    margin-bottom: 1rem;
+  }
+  .new-offers .cups-image {
+  position: relative;
+  top: 0rem;
+  left: 8rem;
+}
+.new-offers .pancakes-image {
+  position: absolute;
+  top: 5rem;
+  left: 0rem;
+}
+.new-offers .nachos-image {
+  position: absolute;
+  top: 12rem;
+  left: 10rem;
+}
+  .new-offers figure {
+  height: 25rem;
+  display: block;
+}
+  .our-portfolio figure {
+    flex-wrap: wrap;
+  }
+  .our-portfolio figure img {
+    flex-basis: 45%;
+  }
+  .contact-us .contact-elements {
+    flex-direction: column;
+  }
+  .contact-us form input,
+  .contact-us form textarea {
+    width: 100%;
+  }
+  .contact-us figure {
+    margin: 0rem;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
 }
 
 /* media for phones: width < 768px */
 @media (max-width: 767px) {
+  
+.header nav ul li {
+  font-size: small;
+margin: 0.1rem;
+padding-top: 1rem;
+}
+.header-info p {
+  width: 70%;
+  margin: auto;
+}
+
+  .what-we-do .doings article {
+    flex-basis: 100%;
+  }
+  .our-portfolio figure img {
+    flex-basis: 100%;
+  }
+  .our-portfolio ul {
+    padding: 0;
+  }
+  .our-portfolio ul li {
+    display: inline-block;
+    margin: 0.3rem;
+  }
 }
